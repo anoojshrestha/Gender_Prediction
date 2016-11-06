@@ -5,18 +5,18 @@
         <script type="text/javascript">
           function sum()
           {
-			 var num1 = document.myform.number1.value;
-			 if(num1 != ""){
-			 var last = num1.slice(-1);
+			 var name1 = document.myform.firstName.value;
+			 if(name1 != ""){
+			 var last = name1.slice(-1);
 			 if((last=='a')||(last=='e')||(last=='i')||(last=='0')||(last=='u'))
 			 {
-				document.getElementById('add').value = "Female";
+				document.getElementById('result').value = "Female";
 			 }
 			 else
-				document.getElementById('add').value = "Male";
+				document.getElementById('result').value = "Male";
             }
 			else
-				document.getElementById('add').value="Please enter your Name";
+				document.getElementById('result').value="Please enter your Name";
 		  }
         </script>
       </HEAD>
@@ -26,10 +26,10 @@
         <FORM NAME="myform">
 		<fieldset>
 		<legend>Predict your Gender </legend>
-          <INPUT TYPE="text" NAME="number1" placeholder="First Name">
+          <INPUT TYPE="text" NAME="firstName" placeholder="First Name">
 		  <INPUT TYPE="text" NAME="number2" placeholder="Last Name"> <br><br>
           <INPUT TYPE="button" NAME="button" Value="Predict" onClick="sum()"><br><br>
-          <INPUT TYPE="text" ID="add" NAME="result"  placeholder="Result" readonly>
+          <INPUT TYPE="text" ID="result" NAME="result"  placeholder="Result" readonly>
 		  </fieldset>
         </FORM>
 		<div> &copy <a href="https://www.facebook.com/anoojshrestha">anooj</a>-2015 </div>
